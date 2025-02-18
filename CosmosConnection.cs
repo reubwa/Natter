@@ -57,7 +57,7 @@ public static class CosmosConnection
             );
         Container messageThread = await publics.database.CreateContainerIfNotExistsAsync(
                 id: "messageThread",
-                partitionKeyPath: "/messageThreadId",
+                partitionKeyPath: "/name",
                 throughput: 400
             );
         Container groupMembership = await publics.database.CreateContainerIfNotExistsAsync(
